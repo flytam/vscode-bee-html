@@ -1,0 +1,71 @@
+{
+    "name": "bee-html",
+    "displayName": "vscode-bee-html",
+    "description": "bee.js 模版文件 vscode插件",
+    "version": "0.0.1",
+    "publisher": "flytam",
+    "icon": "assets/img.png",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/flytam/vscode-bee-html.git"
+    },
+    "author": {
+        "email": "tanjiahui2015@foxmail.com",
+        "name": "flytam",
+        "url": "https://github.com/flytam"
+    },
+    "categories": [
+        "Snippets",
+        "Programming Languages"
+    ],
+    "keywords": [
+        "tpl",
+        "bee.js",
+        "bee",
+        "bee-html"
+    ],
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "bee-html",
+                "aliases": [
+                    "bee",
+                    "bee"
+                ],
+                "extensions": [
+                    ".tpl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bee-html",
+                "scopeName": "text.html.bee-html",
+                "path": "./syntaxes/bee-html.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.js": "javascript"
+                }
+            }
+        ],
+        "snippets": [
+            {
+                "language": "bee-html",
+                "path": "./snippets/bee-html.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.0.0",
+        "@commitlint/config-conventional": "^8.0.0",
+        "husky": "^2.4.0"
+    }
+}

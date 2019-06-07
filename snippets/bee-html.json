@@ -1,0 +1,81 @@
+{
+    "template": {
+        "prefix": "template",
+        "body": ["<template name=\"${2:TEMPLATE}\">", "</template>"],
+        "description": "bee template标签"
+    },
+    "b-model": {
+        "prefix": "b-model",
+        "body": ["b-model=\"${1:some.key}\""],
+        "description": "用于双向绑定. 用于表单输入元素上或自定义组件中. 对于自定义组件, 激活双向绑定需要将其 $valuekey 属性指向需要绑定的 data 路径"
+    },
+    "b-if": {
+        "prefix": "b-if",
+        "body": ["b-if=\"${1:some.expression}\""],
+        "description": "条件指令.控制元素是否出现在 DOM 树中"
+    },
+    "b-repeat": {
+        "prefix": "b-repeat",
+        "body": ["b-repeat=\"${1:item} in ${2:list}\""],
+        "description": "Repeat 指令. 用于展示数组内容.Repeat 指令会创建一个匿名的 bee 实例, 并且会添加一个 $index 变量标示在数组中的索引."
+    },
+    "b-attr": {
+        "prefix": "b-prefix",
+        "body": ["b-attr=\"{${1:key}: '${2:value}'}\""],
+        "description": "HTML 属性指令."
+    },
+    "b-style": {
+        "prefix": "b-style",
+        "description": "b-style, 用于设定样式"
+    },
+    "b-src": {
+        "prefix": "b-src",
+        "description": "b-src 用于图片 src",
+        "body": ["b-src=\"${1:url}\""]
+    },
+    "b-on": {
+        "prefix": "b-on",
+        "description": "事件监听指令. 标准的 b-on 指令接收 backbone 风格的事件处理对象.",
+        "body": [" b-on=\"{'${1:event} a': ${2:handler}}\""]
+    },
+    "b-on-event": {
+        "prefix": "b-on-event",
+        "description": "简单使用 b-on-click, b-on-mousedown 等特定事件指令直接在模板中完成调用.",
+        "body": ["b-on-${1:event}=\"${2:handler()}\""]
+    },
+    "b-class": {
+        "prefix": "b-class",
+        "description": "b-class 用于快速的设定元素的 CSS 类名. b-class 指令支持字符串或者对象格式.对于对象格式 <span b-class=\"{'myclassname': 'mykey'}\"></span>, 当 mykey 为 true 时会在 span 元素上添加一个 myclassname 的类名, 反之则移除这个类名.",
+        "body": ["b-class=\"{'myclassname': 'mykey'}\""]
+    },
+    "b-text": {
+        "prefix": "b-text",
+        "description": " 用于展示普通文本内容. 等同于双花括号表达式",
+        "body": ["b-text=\"${1:some.key}\""]
+    },
+    "b-html": {
+        "prefix": "b-html",
+        "description": "用于展示为转义 HTML 内容. 等同于三花括号表达式",
+        "body": ["b-html=\"${1:some.key}\""]
+    },
+    "b-content": {
+        "prefix": "b-content",
+        "description": "可用于展示 DOM 内容, 等同于 {{> some.key }}",
+        "body": ["b-content=\"${1:some.key}\""]
+    },
+    "b-ref": {
+        "prefix": "b-ref",
+        "description": "对指定元素或组件建立一个快速的引用. b-ref 标记引用以供 $refs 使用",
+        "body": ["b-ref=\"${1:key}\""]
+    },
+    "b-component": {
+        "prefix": "b-component",
+        "description": "用于组件化自定义标签. 等同于自定义标签. 如 <span b-compoent=\"x-component\">content</span> 等同于 <x-component>content</x-component>",
+        "body": ["b-component=\"${1:component-name}\""]
+    },
+    "b-tag": {
+        "prefix": "b-tag",
+        "description": "用于组件化自定义标签. 等同于自定义标签. 如 <span b-tag=\"x-tag\">content</span> 等同于 <x-tag>content</x-tag>",
+        "body": ["b-tag=\"${1:tag-name}\""]
+    }
+}
