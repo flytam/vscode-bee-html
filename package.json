@@ -6,7 +6,7 @@
     "publisher": "flytam",
     "icon": "assets/img.png",
     "engines": {
-        "vscode": "^1.35.0"
+        "vscode": "^1.0.0"
     },
     "repository": {
         "type": "git",
