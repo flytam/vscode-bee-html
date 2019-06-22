@@ -16,3 +16,14 @@
 2、默认情况下`.tpl`扩展会启用
 
 ![](assets/example.gif)
+
+#### 发布
+
+```bash
+vsce publish patch
+```
+
+#### todo
+
+-   bee javascript 的提示
+-   悬停
