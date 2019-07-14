@@ -22,8 +22,11 @@
 ```bash
 vsce publish patch
 ```
+#### tips
+
+暂时不能格式化...
 
 #### todo
 
 -   bee javascript 的提示
--   悬停
+-   支持tpl的格式化（大概是要学习下怎样利用原生html插件的语言服务器格式化吧）
